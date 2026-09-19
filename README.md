@@ -2,7 +2,7 @@
 
 > **A mission-critical, open-source Laravel 11 + Flutter ecosystem** for 24/7 engineering operations teams to execute verified shift checklists, record status updates with immutable audit trails, manage two-way handovers, war rooms, and real-time operational telemetry.
 
-[![Production Live](https://img.shields.io/badge/Live%20Demo-opsora--sre.onrender.com-1B6B3A?style=flat&logo=render)](https://opsora-sre.onrender.com)
+[![Production Live](https://img.shields.io/badge/Live%20Demo-npontu--support--tracker.onrender.com-1B6B3A?style=flat&logo=render)](https://npontu-support-tracker.onrender.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-F5C518.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Backend Tests](https://img.shields.io/badge/backend%20tests-109%20passing%20(541%20assertions)-brightgreen)](tests/)
@@ -14,10 +14,11 @@
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](#-60-second-quickstart-docker)
 
 🌐 **Live Demo & Real-Time Status**:
-- **Web Console**: [https://opsora-sre.onrender.com](https://opsora-sre.onrender.com)
-- **Real-Time Telemetry & Status**: [https://opsora-sre.onrender.com/health](https://opsora-sre.onrender.com/health)
-- **Documentation & API Specs**: [https://opsora-sre.onrender.com/docs](https://opsora-sre.onrender.com/docs)
-- **API Base**: `https://opsora-sre.onrender.com/api/v1`
+- **Render Endpoint**: [https://npontu-support-tracker.onrender.com](https://npontu-support-tracker.onrender.com)
+- **Live Custom Domain**: [https://npontu-tracker.johnokyere.xyz](https://npontu-tracker.johnokyere.xyz)
+- **Real-Time Telemetry & Status**: [https://npontu-support-tracker.onrender.com/health](https://npontu-support-tracker.onrender.com/health)
+- **Documentation & API Specs**: [https://npontu-support-tracker.onrender.com/docs](https://npontu-support-tracker.onrender.com/docs)
+- **API Base**: `https://npontu-support-tracker.onrender.com/api/v1`
 
 > 🌟 **Star this repository** if you find Opsora SRE useful for your engineering and operations teams! It helps the project grow and reach more SREs worldwide.
 
@@ -42,7 +43,7 @@ Open [http://localhost:8000](http://localhost:8000) in your browser!
 - **Android APK (ARM64)**: Pre-compiled release APKs available in [GitHub Releases](https://github.com/mhiskall282/opsora-sre/releases) or build directly with:
   ```bash
   cd npontu_sre_mobile
-  flutter build apk --split-per-abi --dart-define=API_BASE_URL=https://opsora-sre.onrender.com/api/v1
+  flutter build apk --split-per-abi --dart-define=API_BASE_URL=https://npontu-support-tracker.onrender.com/api/v1
   ```
 - **App Store & Google Play Publishing**: Complete runbook in [Store Publishing Guide](docs/deployment/store-publishing-guide.md).
 
@@ -294,7 +295,7 @@ The platform and companion mobile apps comply with:
 - **Google Play User Data Policy**: Explicit disclosure of permissions, zero advertising SDKs, and transparent offline cache handling.
 - **Apple App Store Review Guideline 5.1.1(v)**: Full account deletion and data extraction request support.
 - **Ghana Data Protection Act 2012 (Act 843)** & **ISO 27001 / PCI-DSS v4.0**:
-  - Web Privacy Policy: Accessible at [`/privacy-policy`](https://opsora-sre.onrender.com/privacy-policy).
+  - Web Privacy Policy: Accessible at [`/privacy-policy`](https://npontu-support-tracker.onrender.com/privacy-policy).
   - In-App Mobile Privacy Sheet: Accessible via `Settings` &rarr; `Privacy Policy & Data Handling` or on `LoginScreen`.
   - Account Deletion Requests: Submit in-app via *Request Account Deletion* or email to Data Protection Officer at `dpo@npontu.com` (48hr acknowledgment, 30-day SLA).
   - Statutory 7-year cold-storage retention for immutable audit logs.
