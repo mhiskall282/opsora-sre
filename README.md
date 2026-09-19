@@ -1,15 +1,50 @@
 # Opsora SRE — Site Reliability Engineering Operations Platform
 
-> **A mission-critical Laravel 11 + Flutter companion application** for 24/7 engineering operations teams to execute verified shift checklists, record status updates with immutable audit trails, manage two-way handovers, war rooms, and real-time operational telemetry.
+> **A mission-critical, open-source Laravel 11 + Flutter ecosystem** for 24/7 engineering operations teams to execute verified shift checklists, record status updates with immutable audit trails, manage two-way handovers, war rooms, and real-time operational telemetry.
 
-🌐 **Production Deployment**: [https://npontu-support-tracker.onrender.com](https://npontu-support-tracker.onrender.com)
-
+[![Production Live](https://img.shields.io/badge/Live%20Demo-opsora--sre.onrender.com-1B6B3A?style=flat&logo=render)](https://opsora-sre.onrender.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-F5C518.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Backend Tests](https://img.shields.io/badge/backend%20tests-109%20passing%20(541%20assertions)-brightgreen)](tests/)
-[![Mobile Tests](https://img.shields.io/badge/mobile%20tests-22%20passing-brightgreen)](npontu_sre_mobile/test/)
-[![PHP](https://img.shields.io/badge/PHP-8.2+-blue)](https://php.net)
-[![Laravel](https://img.shields.io/badge/Laravel-11.x-red)](https://laravel.com)
+[![Mobile Tests](https://img.shields.io/badge/mobile%20tests-25%20passing-brightgreen)](npontu_sre_mobile/test/)
+[![PHP](https://img.shields.io/badge/PHP-8.2+-blue?logo=php)](https://php.net)
+[![Laravel](https://img.shields.io/badge/Laravel-11.x-red?logo=laravel)](https://laravel.com)
 [![Flutter](https://img.shields.io/badge/Flutter-3.24+-02569B?logo=flutter)](npontu_sre_mobile/)
-[![Tailwind](https://img.shields.io/badge/Tailwind-3.x-cyan)](https://tailwindcss.com)
+[![Tailwind](https://img.shields.io/badge/Tailwind-3.x-38B2AC?logo=tailwind-css)](https://tailwindcss.com)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](#-60-second-quickstart-docker)
+
+🌐 **Live Demo & Real-Time Status**:
+- **Web Console**: [https://opsora-sre.onrender.com](https://opsora-sre.onrender.com)
+- **Real-Time Telemetry & Status**: [https://opsora-sre.onrender.com/health](https://opsora-sre.onrender.com/health)
+- **Documentation & API Specs**: [https://opsora-sre.onrender.com/docs](https://opsora-sre.onrender.com/docs)
+- **API Base**: `https://opsora-sre.onrender.com/api/v1`
+
+> 🌟 **Star this repository** if you find Opsora SRE useful for your engineering and operations teams! It helps the project grow and reach more SREs worldwide.
+
+---
+
+### ⚡ 60-Second Quickstart (Docker)
+
+```bash
+# Clone the repository
+git clone https://github.com/mhiskall282/opsora-sre.git
+cd opsora-sre
+
+# Start the application
+docker compose up -d
+```
+Open [http://localhost:8000](http://localhost:8000) in your browser!
+
+---
+
+### 📱 Download Android APK & Mobile Companion
+
+- **Android APK (ARM64)**: Pre-compiled release APKs available in [GitHub Releases](https://github.com/mhiskall282/opsora-sre/releases) or build directly with:
+  ```bash
+  cd npontu_sre_mobile
+  flutter build apk --split-per-abi --dart-define=API_BASE_URL=https://opsora-sre.onrender.com/api/v1
+  ```
+- **App Store & Google Play Publishing**: Complete runbook in [Store Publishing Guide](docs/deployment/store-publishing-guide.md).
 
 ---
 
@@ -259,7 +294,7 @@ The platform and companion mobile apps comply with:
 - **Google Play User Data Policy**: Explicit disclosure of permissions, zero advertising SDKs, and transparent offline cache handling.
 - **Apple App Store Review Guideline 5.1.1(v)**: Full account deletion and data extraction request support.
 - **Ghana Data Protection Act 2012 (Act 843)** & **ISO 27001 / PCI-DSS v4.0**:
-  - Web Privacy Policy: Accessible at [`/privacy-policy`](https://npontu-support-tracker.onrender.com/privacy-policy).
+  - Web Privacy Policy: Accessible at [`/privacy-policy`](https://opsora-sre.onrender.com/privacy-policy).
   - In-App Mobile Privacy Sheet: Accessible via `Settings` &rarr; `Privacy Policy & Data Handling` or on `LoginScreen`.
   - Account Deletion Requests: Submit in-app via *Request Account Deletion* or email to Data Protection Officer at `dpo@npontu.com` (48hr acknowledgment, 30-day SLA).
   - Statutory 7-year cold-storage retention for immutable audit logs.
@@ -532,6 +567,37 @@ refactor: Code change without feature/fix
 chore:    Build, tooling, config changes
 style:    Formatting, no logic change
 ```
+
+---
+
+## 🤝 Open Source & Contributing
+
+We welcome community contributions, bug reports, and feature proposals! Opsora SRE is built with the belief that mission-critical operations software should be accessible, robust, and community-driven.
+
+- 📖 **[Contributing Guide](CONTRIBUTING.md)**: Setup guides, coding standards, and PR workflows.
+- 📜 **[Code of Conduct](CODE_OF_CONDUCT.md)**: Community standards and inclusive communication expectations.
+- 🛡️ **[Security Policy](SECURITY.md)**: Vulnerability disclosure and security contacts.
+- 🐛 **[Issue Tracker](https://github.com/mhiskall282/opsora-sre/issues)**: Submit bug reports or feature ideas.
+- 💬 **[Discussions & Community](https://github.com/mhiskall282/opsora-sre/discussions)**: Ask questions, share ideas, and connect with other operations engineers.
+- 📦 **[Releases & Changelog](https://github.com/mhiskall282/opsora-sre/releases)**: Pre-built artifacts, mobile APKs, and release notes.
+
+### How to Help
+1. 🌟 **Star the repository** to boost visibility on GitHub.
+2. 🍴 **Fork the project** and submit pull requests for features or bug fixes.
+3. 🏷️ Look for issues tagged `good first issue` or `help wanted`.
+4. 📝 Improve documentation, tutorials, and runbooks.
+
+---
+
+## 📄 License
+
+Opsora SRE is open-sourced software licensed under the [MIT License](LICENSE).
+
+---
+
+## 🏷️ GitHub Search Keywords & Topics
+
+`site-reliability-engineering` • `sre` • `devops` • `shift-handover` • `on-call` • `incident-management` • `telemetry` • `system-health` • `uptime-monitoring` • `laravel-11` • `livewire-3` • `flutter` • `dart` • `mobile-app` • `compliance-audit` • `open-source` • `hacktoberfest` • `docker` • `postgresql` • `tailwind-css`
 
 ---
 

@@ -10,7 +10,7 @@ class AppConstants {
   static const String buildNumber = '3';
   static const String baseUrl = String.fromEnvironment(
     'API_BASE_URL',
-    defaultValue: 'https://npontu-support-tracker.onrender.com/api/v1',
+    defaultValue: 'https://opsora-sre.onrender.com/api/v1',
   );
 
   // Storage Keys
@@ -18,6 +18,7 @@ class AppConstants {
   static const String userDataKey = 'npontu_user_data';
   static const String themeModeKey = 'npontu_theme_mode';
   static const String baseUrlKey = 'npontu_base_url';
+  static const String activeWorkspaceKey = 'opsora_active_workspace_id';
 
   // SRE Priority Tiers
   static const String priorityCritical = 'critical'; // P1
