@@ -45,17 +45,17 @@
                 </div>
             </a>
 
-            {{-- Story Navigation Links (Desktop) --}}
-            <nav class="hidden md:flex items-center gap-5 text-xs font-semibold text-gray-300">
-                <a href="#the-problem" class="hover:text-[#F5C518] transition-colors">The Challenge</a>
-                <a href="#the-solution" class="hover:text-[#F5C518] transition-colors">The Handshake</a>
-                <a href="#pillars" class="hover:text-[#F5C518] transition-colors">Pillars</a>
-                <a href="#audiences" class="hover:text-[#F5C518] transition-colors">For Every Role</a>
+            {{-- Simplified Navigation Links (Desktop) --}}
+            <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-gray-300">
+                <a href="#pillars" class="hover:text-[#F5C518] transition-colors">Platform</a>
                 <a href="#mobile" class="hover:text-[#F5C518] transition-colors flex items-center gap-1.5">
                     <span>Mobile App</span>
-                    <span class="px-1.5 py-0.5 rounded text-[9px] font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">APK</span>
+                    <span class="px-1.5 py-0.2 rounded text-[9px] font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">APK</span>
                 </a>
-                <a href="#telemetry" class="hover:text-[#F5C518] transition-colors">Telemetry</a>
+                <a href="{{ route('health') }}" class="hover:text-[#F5C518] transition-colors flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Live Status</span>
+                </a>
                 <a href="{{ route('docs') }}" class="text-[#F5C518] hover:underline transition-colors font-bold">Docs &amp; Guide</a>
             </nav>
 
@@ -65,12 +65,6 @@
                     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                     <span id="nav-live-clock">UTC --:--:--</span>
                 </div>
-
-                <a href="{{ route('health') }}"
-                   class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-950/60 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-900/60 transition-colors">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                    <span>SLA 99.98%</span>
-                </a>
 
                 @auth
                     <a href="{{ route('activities.daily') }}"
@@ -105,37 +99,25 @@
         <div id="landing-mobile-menu"
              class="hidden md:hidden bg-[#0A140E]/98 border-b border-[#14261B] px-4 pt-3 pb-5 space-y-1 shadow-2xl backdrop-blur-xl">
             <div class="px-3 pb-2 text-[10px] font-mono font-bold uppercase tracking-wider text-gray-400">
-                Navigation &amp; Operations
+                Navigation
             </div>
-            <a href="#the-problem" onclick="toggleLandingNav()" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-200 hover:text-[#F5C518] hover:bg-white/5 transition-colors">
-                The Challenge
-            </a>
-            <a href="#the-solution" onclick="toggleLandingNav()" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-200 hover:text-[#F5C518] hover:bg-white/5 transition-colors">
-                The Handshake
-            </a>
             <a href="#pillars" onclick="toggleLandingNav()" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-200 hover:text-[#F5C518] hover:bg-white/5 transition-colors">
-                Core Pillars
-            </a>
-            <a href="#audiences" onclick="toggleLandingNav()" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-200 hover:text-[#F5C518] hover:bg-white/5 transition-colors">
-                Stakeholder Roles (CIO, Leads, SREs)
+                Platform &amp; Pillars
             </a>
             <a href="#mobile" onclick="toggleLandingNav()" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-200 hover:text-[#F5C518] hover:bg-white/5 transition-colors flex items-center justify-between">
                 <span>Mobile App (Android APK)</span>
-                <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300">v1.1.0</span>
-            </a>
-            <a href="#telemetry" onclick="toggleLandingNav()" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-200 hover:text-[#F5C518] hover:bg-white/5 transition-colors">
-                Live Telemetry
-            </a>
-            <a href="{{ route('docs') }}" class="block px-3 py-2 rounded-lg text-sm font-bold text-[#F5C518] hover:bg-white/5 transition-colors flex items-center justify-between">
-                <span>Docs &amp; Architecture Guide</span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-[#F5C518]/20 text-[#F5C518] uppercase">Full Manual</span>
+                <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300">v1.3.0</span>
             </a>
             <a href="{{ route('health') }}" class="block px-3 py-2 rounded-lg text-sm font-semibold text-emerald-300 hover:bg-white/5 transition-colors flex items-center justify-between">
                 <span class="flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span>System Diagnostics HUD</span>
+                    <span>Live System Status</span>
                 </span>
-                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 border border-emerald-500/30 text-emerald-300">99.98% SLA</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 border border-emerald-500/30 text-emerald-300">Standalone</span>
+            </a>
+            <a href="{{ route('docs') }}" class="block px-3 py-2 rounded-lg text-sm font-bold text-[#F5C518] hover:bg-white/5 transition-colors flex items-center justify-between">
+                <span>Docs &amp; Architecture Guide</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-[#F5C518]/20 text-[#F5C518] uppercase">Manual</span>
             </a>
 
             <div class="pt-3 mt-2 border-t border-white/10 flex items-center justify-between text-xs text-gray-400 px-3 font-mono">
@@ -706,14 +688,14 @@
 
                         <div class="flex flex-wrap items-center gap-3 pt-1">
                             {{-- Universal APK Download --}}
-                            <a href="https://github.com/mhiskall282/npontu-technologies-sre/actions" target="_blank"
+                            <a href="https://github.com/mhiskall282/opsora-sre/releases" target="_blank"
                                class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#1B6B3A] hover:bg-[#2A8F52] text-white font-bold text-xs shadow-lg transition-transform hover:scale-[1.02]">
                                 <svg class="w-4 h-4 text-[#F5C518]" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.414 13.8533 8.12 12 8.12s-3.5902.294-5.1368.8307L4.8409 5.4477a.416.416 0 00-.5676-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/></svg>
                                 <span>Universal Release APK (.apk)</span>
                             </a>
 
                             {{-- GitHub Actions Artifacts Link --}}
-                            <a href="https://github.com/mhiskall282/npontu-technologies-sre/actions/workflows/flutter-ci.yml" target="_blank"
+                            <a href="https://github.com/mhiskall282/opsora-sre/actions/workflows/flutter-ci.yml" target="_blank"
                                class="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-gray-200 font-mono text-xs border border-white/10 transition-colors">
                                 <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                                 <span>GitHub CI Builds &amp; Split APKs</span>
