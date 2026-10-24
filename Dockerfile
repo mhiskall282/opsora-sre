@@ -8,7 +8,7 @@ COPY . .
 RUN npm run build
 
 # ── Stage 2: PHP runtime (Apache) ─────────────────────────────────────────────
-FROM php:8.2-apache
+FROM php:8.2.35-apache
 
 # System dependencies + PHP extensions required by Laravel + PostgreSQL
 RUN apt-get update && apt-get install -y \
@@ -36,6 +36,10 @@ RUN apt-get update && apt-get install -y \
 
 # Enable Apache mod_rewrite (needed for Laravel routing)
 RUN a2enmod rewrite
+
+# PHP2Shell (CVE-2026-109618 & CVE-2026-109619) Core Mitigation
+RUN echo session.upload_progress.enabled = 0 > $PHP_INI_DIR/conf.d/security.ini \
+    && echo session.upload_progress.cleanup = 1 >> $PHP_INI_DIR/conf.d/security.ini
 
 # Configure Apache to serve from /var/www/html/public and set ServerName
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
